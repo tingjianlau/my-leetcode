@@ -31,6 +31,10 @@ if __name__ == '__main__':
         system(command)
 
         # 新建readme文件
+        command = "cp sub_readme_module.md " + name + '/' + 'README.md'
+        system(command)
+
+        # 打开readme文件
         command = "vim " + name + '/' + 'README.md'
         system(command)
     else:
