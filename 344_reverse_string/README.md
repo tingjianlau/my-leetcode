@@ -10,5 +10,5 @@ Given s = "hello", return "olleh".
 ##Tags
 Two Pointers, String
 
-##Difficuly
+##Difficulty
 Easy
