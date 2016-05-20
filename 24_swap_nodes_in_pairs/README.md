@@ -10,3 +10,6 @@ Your algorithm should use only constant space. You may <b>not</b> modify the val
 
 ##Tags
 Linked List
+
+##Difficulty
+Easy

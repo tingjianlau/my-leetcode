@@ -17,3 +17,6 @@ For example, given numRows = 5,
 
 ##Tags
 Array
+
+##Difficulty
+Easy

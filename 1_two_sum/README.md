@@ -14,3 +14,6 @@ You may assume that each input would have <b><i>exactly</i></b> one solution.
 
 ##Tags
 Array, Hash Table
+
+##Difficulty
+Easy

@@ -12,3 +12,6 @@ Given s = "leetcode", return "leotcede".
 
 ##Tags
 Two Pointers, String
+
+##Difficulty
+Easy

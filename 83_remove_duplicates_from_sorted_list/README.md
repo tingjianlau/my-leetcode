@@ -12,3 +12,6 @@ For example,
 Linked List
 
 
+
+##Difficulty
+Easy

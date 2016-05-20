@@ -15,3 +15,6 @@ A happy number is a number defined by the following process: Starting with any p
 
 ##Tags
 Hash Table, Math
+
+##Difficulty
+Easy

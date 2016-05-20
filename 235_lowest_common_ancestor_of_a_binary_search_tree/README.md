@@ -17,3 +17,6 @@ For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another exa
 
 ##Tags
 Tree
+
+##Difficulty
+Easy

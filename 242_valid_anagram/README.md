@@ -13,3 +13,9 @@ You may assume the string contains only lowercase alphabets.
 
 <b>Follow up:</b><br>
 What if the inputs contain unicode characters? How would you adapt your solution to such case?
+
+##Tags
+Hash Table, Sort
+
+##Difficulty
+Easy

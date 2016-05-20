@@ -9,3 +9,6 @@ Could you do it without using any loop / recursion?
 
 ##tags
 Math
+
+##Difficulty
+Easy

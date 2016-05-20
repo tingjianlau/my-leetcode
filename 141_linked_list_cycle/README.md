@@ -9,3 +9,6 @@ Can you solve it without using extra space?
 
 ##Tags
 Linked List, Tow Pointers
+
+##Difficulty
+Easy

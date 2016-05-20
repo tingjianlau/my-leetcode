@@ -8,3 +8,6 @@ If you were only permitted to complete at most one transaction (ie, buy one and 
 
 ##Tags
 Array, Dynamic Programming
+
+##Difficulty
+Easy

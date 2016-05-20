@@ -25,7 +25,7 @@ if __name__ == '__main__':
             curAlgFile = os.path.join(absFolderPath, algFile)
             exe = algFile.strip().split('.')[-1]
 
-            if exe == 'txt':
+            if exe == 'md':
                 with codecs.open(curAlgFile, 'a', 'utf-8') as f:
                     f.write('\n##Difficulty\nEasy\n') 
         
