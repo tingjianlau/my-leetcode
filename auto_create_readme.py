@@ -33,10 +33,6 @@ if __name__ == '__main__':
         algLink = 'https://www.leetcode.com//problemset/algorithms/'
         tags = 'Default'
         difficulty = 'Default'
-        cplusplus = 0
-        c = 0
-        java = 0
-        python = 0
         solutions = ''
 
         # 变脸每个题目目录下的所有文件，包括各个语言的实现文件和README.md文件
@@ -66,19 +62,15 @@ if __name__ == '__main__':
                         elif line[0:12] == '##Difficulty' or line[0:6] == '##difficulty':
                             difficulty = lines[i + 1][:-1].strip()    # 去除前后空格和换行符
             elif exe == 'c':
-                c = 1
                 cLink = './' + algFolder + '/' + algFolder + '.c'
                 solutions += '[C](' + cLink + '), '
             elif exe == 'cpp':
-                cplusplus = 1
                 cplusplusLink = './' + algFolder + '/' + algFolder + '.cpp'
                 solutions += '[C++](' + cplusplusLink + '), '
             elif exe == 'py':
-                python = 1
                 pyLink = './' + algFolder + '/' + algFolder + '.py'
                 solutions += '[Python](' + pyLink + '), '
             elif exe == 'java':
-                java = 1
                 javaLink = './' + algFolder + '/' + algFolder + '.java'
                 solutions += '[Java](' + javaLink + '), '
                     
