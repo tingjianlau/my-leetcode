@@ -45,8 +45,7 @@ if __name__ == '__main__':
                     lines = f.readlines()
                     for i, line in enumerate(lines):
                         if i == 0:  # Title 
-                            problem_title = ''.join(line.split('.')[1:])
-                            problem_title = '[' + problem_title[1:]
+                            problem_title = '[' + line[line.find('.')+2:]
                             problem_title = problem_title[:-1].strip()    # 去除前后空格和换行符
                         elif line[0:7] == '###Tags' or line[0:7] == '###tags':
                             tags = lines[i + 1][:-1].strip()    # 去除前后空格和换行符
