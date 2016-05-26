@@ -1,17 +1,22 @@
-##Link (已排序的单链表去重操作)
-https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+###[83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+已排序的单链表去重操作
 
-##Details
-Given a sorted linked list, delete all duplicates such that each element appear only once.
+###Contents
+<p><p>
+Given a sorted linked list, delete all duplicates such that each element appear only <i>once</i>.
+</p>
+<p>
+For example,<br/>
+Given <code>1-&gt;1-&gt;2</code>, return <code>1-&gt;2</code>.<br/>
+Given <code>1-&gt;1-&gt;2-&gt;3-&gt;3</code>, return <code>1-&gt;2-&gt;3</code>.
+</p></p>
 
-For example,
-    Given <code>1->1->2</code>, return <code>1->2</code>.
-    Given <code>1->1->2->3->3</code>, return <code>1->2->3</code>.
-
-##Tags
-Linked List
-
-
-
-##Difficulty
+###Difficulty
 Easy
+
+###Tags
+[Linked List](https://leetcode.com/tag/linked-list/)
+
+###Similar Problems
+
+

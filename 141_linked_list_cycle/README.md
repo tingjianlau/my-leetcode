@@ -1,14 +1,21 @@
-##Link (用Floyd Cycle Detection算法判断链表是否有环)
-https://leetcode.com/problems/linked-list-cycle/
+###[141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+用Floyd
 
-##Details
+###Contents
+<p><p>
 Given a linked list, determine if it has a cycle in it.
-
-Follow up:
+</p>
+<p>
+Follow up:<br/>
 Can you solve it without using extra space?
+</p></p>
 
-##Tags
-Linked List, Tow Pointers
-
-##Difficulty
+###Difficulty
 Easy
+
+###Tags
+[Two Pointers](https://leetcode.com/tag/two-pointers/), [Linked List](https://leetcode.com/tag/linked-list/)
+
+###Similar Problems
+[(M) Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+

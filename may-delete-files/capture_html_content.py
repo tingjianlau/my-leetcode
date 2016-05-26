@@ -36,6 +36,8 @@ if __name__ == '__main__':
     problem_dict[write_order[2]] = list(soup.find_all('span', 'total-submit text-info'))[-1].strong.string.strip()
     
     # get problem's contents        
+    similarInx = -1
+    tagInx = -1
     contents = list(soup.find('div', class_='question-content'))
     for i in range(len(contents)-1, -1, -1):
         if str(contents[i]).find('/problems') != -1:
@@ -51,22 +53,24 @@ if __name__ == '__main__':
         problem_content += str(contents[i])
     problem_dict[write_order[1]] = problem_content.strip()
     # tags
-    problem_tags_dict = {}
-    for tag in contents[tagInx].find_all(href=re.compile(r'/tag/')):
-        problem_tags_dict[tag.string.strip()] = tag['href'].strip()
     problem_tags = ''
-    for key, val in problem_tags_dict.items():
-        problem_tags += '[' + key + '](https://leetcode.com' + val + '), '
-    problem_tags = problem_tags[:-2]
+    if tagInx != -1:
+        problem_tags_dict = {}
+        for tag in contents[tagInx].find_all(href=re.compile(r'/tag/')):
+            problem_tags_dict[tag.string.strip()] = tag['href'].strip()
+        for key, val in problem_tags_dict.items():
+            problem_tags += '[' + key + '](https://leetcode.com' + val + '), '
+        problem_tags = problem_tags[:-2]
     problem_dict[write_order[3]] = problem_tags
     # similar
-    problem_similar_dict = {}
-    for similar in contents[similarInx].find_all(href=re.compile(r'/problems/')):
-        problem_similar_dict[similar.string.strip()] = similar['href'].strip()
     problem_similar = ''
-    for key, val in problem_similar_dict.items():
-        problem_similar += '[' + key + '](https://leetcode.com' + val + '), '
-    problem_similar = problem_similar[:-2]
+    if similarInx != -1:
+        problem_similar_dict = {}
+        for similar in contents[similarInx].find_all(href=re.compile(r'/problems/')):
+            problem_similar_dict[similar.string.strip()] = similar['href'].strip()
+        for key, val in problem_similar_dict.items():
+            problem_similar += '[' + key + '](https://leetcode.com' + val + '), '
+        problem_similar = problem_similar[:-2]
     problem_dict[write_order[4]] = problem_similar
 
     #print problem_dict
@@ -80,11 +84,7 @@ if __name__ == '__main__':
     name_title = slug_url.replace('-', '_')
     name = problem_dict['Id'] + '_' + name_title 
 
-    if not os.path.exists(name):
-        # 建立文件夹
-        command = "mkdir " + name 
-        system(command)
-
+    if os.path.exists(name):
         # 新建readme文件
         with open(name + '/README.md', 'w') as f:
             for i in range(len(write_order)):
@@ -100,18 +100,7 @@ if __name__ == '__main__':
                     f.write(line)
     
     
-        # 新建cpp文件
-        command = "vim " + name + '/' + name + '.cpp'
-        system(command)
-
-        # 新建c文件
-        command = "vim " + name + '/' + name + '.c'
-        system(command)
-     
-        # 新建python文件
-        command = "vim " + name + '/' + name + '.py'
-        system(command)
         print 'Done for %s' % name
     else:
-        print name + ' has been created!'
+        print name + ' has not  been created!'
 

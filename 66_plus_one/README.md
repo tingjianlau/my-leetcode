@@ -1,13 +1,16 @@
-##Link (字符串的整数加法运算)
-https://leetcode.com/problems/puls-one
+###[66. Plus One](https://leetcode.com/problems/plus-one)
+字符串的整数加法运算
 
-##Details
-Given a non-negative number represented as an array of digits, plus one to the number.
+###Contents
+<p><p>Given a non-negative number represented as an array of digits, plus one to the number.</p>
+<p>The digits are stored such that the most significant digit is at the head of the list.</p></p>
 
-The digits are stored such that the most significant digit is at the head of the list.
-
-##Tags
-Array, Math
-
-##Difficulty
+###Difficulty
 Easy
+
+###Tags
+[Array](https://leetcode.com/tag/array/), [Math](https://leetcode.com/tag/math/)
+
+###Similar Problems
+[(E) Add Binary](https://leetcode.com/problems/add-binary/), [(M) Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+

@@ -30,7 +30,7 @@ if __name__ == '__main__':
         absFolderPath = os.path.join(os.getcwd(), algFolder)
         
         # 初始化变量
-        problem_title = 'https://www.leetcode.com//problemset/algorithms/'
+        algLink = 'https://www.leetcode.com//problemset/algorithms/'
         tags = 'Default'
         difficulty = 'Default'
         solutions = ''
@@ -44,13 +44,22 @@ if __name__ == '__main__':
                 with open(curAlgFile, 'r') as f:
                     lines = f.readlines()
                     for i, line in enumerate(lines):
-                        if i == 0:  # Title 
-                            problem_title = ''.join(line.split('.')[1:])
-                            problem_title = '[' + problem_title[1:]
-                            problem_title = problem_title[:-1].strip()    # 去除前后空格和换行符
-                        elif line[0:7] == '###Tags' or line[0:7] == '###tags':
-                            tags = lines[i + 1][:-1].strip()    # 去除前后空格和换行符
-                        elif line[0:13] == '###Difficulty' or line[0:13] == '###difficulty':
+                        if line[0:6] == '##Link' or line[0:6] == '##link':
+                            algLink = lines[i + 1][:-1].strip()    # 去除前后空格和换行符
+                        elif line[0:6] == '##Tags' or line[0:6] == '##tags':
+                            tagsLink = ''
+                            tags = lines[i + 1][:-1].strip().split(',')    # 去除前后空格和换行符
+                            for tag in tags:
+                                tagSuffixLink = ''
+                                if ' ' not in tag.strip():
+                                    tagSuffixLink = tag.strip().lower()
+                                else:
+                                    for t in tag.strip().split(' '):
+                                        tagSuffixLink += t.lower() + '-'
+                                    tagSuffixLink = tagSuffixLink[:-1]
+                                tagsLink += '[' + tag.strip() + ']' + '(https://leetcode.com/tag/' + tagSuffixLink +'), '
+                            tags = tagsLink.strip()[:-1]
+                        elif line[0:12] == '##Difficulty' or line[0:6] == '##difficulty':
                             difficulty = lines[i + 1][:-1].strip()    # 去除前后空格和换行符
             elif exe == 'c':
                 cLink = './' + algFolder + '/' + algFolder + '.c'
@@ -67,7 +76,7 @@ if __name__ == '__main__':
                     
             
         solutions = solutions[:-2]  # 去除最后的逗号
-        writeLine = '|' + id + '|' +  problem_title + '|' + solutions + '|' + tags + '|' + difficulty + '|\n' 
+        writeLine = '|' + id + '|[' + name + '](' + algLink + ')|' + solutions + '|' + tags + '|' + difficulty + '|\n' 
         #print writeLine
         #writeLines.append(writeLine)
         writeLines[writeLine] = int(id)
@@ -76,14 +85,13 @@ if __name__ == '__main__':
     writeLines = sorted(writeLines.iteritems(), key=lambda d:d[1], reverse = False)
     #print writeLines 
     # 写入README.md
-    readme = 'README_2.md'
+    readme = 'README.md'
     title = ['##My Leetcode Algorithms\n\n', '| # | Title | Solution | Tags | Difficulty |\n', '|---| ----- | -------- | ---- | ---------- |\n']    
     aimF = open(readme, 'w')
     aimF.write(''.join(title))  # 写入标题
 
     for line in writeLines:
-        #print line[0]
+        print line[0]
         aimF.write(line[0])
 
     aimF.close()
-    print 'Done!'
