@@ -76,7 +76,7 @@ if __name__ == '__main__':
     writeLines = sorted(writeLines.iteritems(), key=lambda d:d[1], reverse = False)
     #print writeLines 
     # 写入README.md
-    readme = 'README_2.md'
+    readme = 'README.md'
     title = ['##My Leetcode Algorithms\n\n', '| # | Title | Solution | Tags | Difficulty |\n', '|---| ----- | -------- | ---- | ---------- |\n']    
     aimF = open(readme, 'w')
     aimF.write(''.join(title))  # 写入标题
