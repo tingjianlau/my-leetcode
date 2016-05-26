@@ -18,6 +18,7 @@ if __name__ == '__main__':
             algFolders.append(algFolder)   # 目标文件夹
 
     writeLines = {}
+    problem_counts = len(algFolders)
     # 循环外层文件夹
     for algFolder in algFolders:
         #print algFolder + ":------->\n"
@@ -76,13 +77,14 @@ if __name__ == '__main__':
     #print writeLines 
     # 写入README.md
     readme = 'README.md'
-    title = ['##My Leetcode Algorithms\n\n', '| # | Title | Solution | Tags | Difficulty |\n', '|---| ----- | -------- | ---- | ---------- |\n']    
-    aimF = open(readme, 'w')
-    aimF.write(''.join(title))  # 写入标题
+    title = ['##My Leetcode Algorithms *(' + str(problem_counts) + '/334)*\n\n', '| # | Title | Solution | Tags | Difficulty |\n', '|---| ----- | -------- | ---- | ---------- |\n']    
+    if 1:
+        aimF = open(readme, 'w')
+        aimF.write(''.join(title))  # 写入标题
 
-    for line in writeLines:
-        #print line[0]
-        aimF.write(line[0])
+        for line in writeLines:
+            #print line[0]
+            aimF.write(line[0])
 
-    aimF.close()
+        aimF.close()
     print 'Done!'
