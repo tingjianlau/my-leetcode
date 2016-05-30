@@ -14,6 +14,9 @@ from os import system
 if __name__ == '__main__':
     msg = sys.argv[1]
 
+    command = 'python auto_create_readme.py'
+    system(command)
+    
     command = 'git add .'
     system(command)
 
