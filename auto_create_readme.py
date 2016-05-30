@@ -25,6 +25,7 @@ if __name__ == '__main__':
         
         # 获取每题的id和name
         id, name = algFolder.strip().split('_')[0], algFolder.strip().split('_')[1:]
+        idLink = '[' + id + '](./' + algFolder + ')'
         # 格式化name
         name = ' '.join(name) 
         # print id + '\n' + name + '\n'
@@ -67,7 +68,7 @@ if __name__ == '__main__':
                     
             
         solutions = solutions[:-2]  # 去除最后的逗号
-        writeLine = '|' + id + '|' +  problem_title + '|' + solutions + '|' + tags + '|' + difficulty + '|\n' 
+        writeLine = '|' + idLink + '|' +  problem_title + '|' + solutions + '|' + tags + '|' + difficulty + '|\n' 
         #print writeLine
         #writeLines.append(writeLine)
         writeLines[writeLine] = int(id)

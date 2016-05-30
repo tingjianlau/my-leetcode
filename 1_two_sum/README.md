@@ -1,5 +1,5 @@
 ###[1. Two Sum](https://leetcode.com/problems/two-sum/)
-用Hash
+从数组中找出两个元素使其等于指定值
 
 ###Contents
 <p><p>Given an array of integers, return <b>indices</b> of the two numbers such that they add up to a specific target.</p>
