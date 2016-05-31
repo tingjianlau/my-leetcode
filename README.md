@@ -1,4 +1,4 @@
-##My Leetcode Algorithms *(19/334)*
+##My Leetcode Algorithms *(20/334)*
 
 | # | Title | Solution | Tags | Difficulty |
 |---| ----- | -------- | ---- | ---------- |
@@ -10,6 +10,7 @@
 |[66](./66_plus_one)|[Plus One](https://leetcode.com/problems/plus-one)|[C++](./66_plus_one/66_plus_one.cpp), [C](./66_plus_one/66_plus_one.c), [Python](./66_plus_one/66_plus_one.py)|[Array](https://leetcode.com/tag/array/), [Math](https://leetcode.com/tag/math/)|Easy|
 |[70](./70_climbing_stairs)|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs)|[C++](./70_climbing_stairs/70_climbing_stairs.cpp), [Python](./70_climbing_stairs/70_climbing_stairs.py)|[Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)|Easy|
 |[83](./83_remove_duplicates_from_sorted_list)|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[C++](./83_remove_duplicates_from_sorted_list/83_remove_duplicates_from_sorted_list.cpp), [Python](./83_remove_duplicates_from_sorted_list/83_remove_duplicates_from_sorted_list.py)|[Linked List](https://leetcode.com/tag/linked-list/)|Easy|
+|[88](./88_merge_sorted_array)|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[C++](./88_merge_sorted_array/88_merge_sorted_array.cpp), [Python](./88_merge_sorted_array/88_merge_sorted_array.py)|[Two Pointers](https://leetcode.com/tag/two-pointers/), [Array](https://leetcode.com/tag/array/)|Easy|
 |[100](./100_same_tree)|[Same Tree](https://leetcode.com/problems/same-tree)|[C++](./100_same_tree/100_same_tree.cpp), [Python](./100_same_tree/100_same_tree.py)|[Depth-first Search](https://leetcode.com/tag/depth-first-search/), [Tree](https://leetcode.com/tag/tree/)|Easy|
 |[118](./118_pascals_triangle)|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)|[C++](./118_pascals_triangle/118_pascals_triangle.cpp)|[Array](https://leetcode.com/tag/array/)|Easy|
 |[121](./121_best_time_to_buy_and_sell_stock)|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)|[C++](./121_best_time_to_buy_and_sell_stock/121_best_time_to_buy_and_sell_stock.cpp), [Python](./121_best_time_to_buy_and_sell_stock/121_best_time_to_buy_and_sell_stock.py)|[Array](https://leetcode.com/tag/array/), [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)|Easy|
