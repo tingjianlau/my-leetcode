@@ -6,6 +6,7 @@
 #	> Author: Tingjian Lau
 #	> Mail: tjliu@mail.ustc.edu.cn
 #	> Created Time: 2016/05/25
+#   > Detail: 自动创建目录，文件和README文件
 #########################################################################
 
 from bs4 import BeautifulSoup
@@ -13,6 +14,10 @@ import urllib2
 import re
 import os, sys
 from os import system
+
+#-----使用方法-------#
+#param 1: string 传入slug url, 即题目网址的最后一段
+#param 2: string 传入中文说明
 
 if __name__ == '__main__':
     slug_url = sys.argv[1]

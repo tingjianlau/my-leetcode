@@ -1,8 +1,9 @@
-##My Leetcode Algorithms *(20/334)*
+##My Leetcode Algorithms *(21/334)*
 
 | # | Title | Solution | Tags | Difficulty |
 |---| ----- | -------- | ---- | ---------- |
 |[1](./1_two_sum)|[Two Sum](https://leetcode.com/problems/two-sum/)|[C++](./1_two_sum/1_two_sum.cpp), [C](./1_two_sum/1_two_sum.c), [Python](./1_two_sum/1_two_sum.py)|[Array](https://leetcode.com/tag/array/), [Hash Table](https://leetcode.com/tag/hash-table/)|Easy|
+|[9](./9_palindrome_number)|[Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[C](./9_palindrome_number/9_palindrome_number.c)|[Math](https://leetcode.com/tag/math/)|Easy|
 |[13](./13_roman_to_integer)|[Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[C](./13_roman_to_integer/13_roman_to_integer.c), [C++](./13_roman_to_integer/13_roman_to_integer.cpp), [Python](./13_roman_to_integer/13_roman_to_integer.py)|[String](https://leetcode.com/tag/string/), [Math](https://leetcode.com/tag/math/)|Easy|
 |[21](./21_merge_two_sorted_lists)|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[C++](./21_merge_two_sorted_lists/21_merge_two_sorted_lists.cpp), [C](./21_merge_two_sorted_lists/21_merge_two_sorted_lists.c)|[Linked List](https://leetcode.com/tag/linked-list/)|Easy|
 |[24](./24_swap_nodes_in_pairs)|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[C++](./24_swap_nodes_in_pairs/24_swap_nodes_in_pairs.cpp)|[Linked List](https://leetcode.com/tag/linked-list/)|Easy|
