@@ -6,22 +6,42 @@
 #	> Author: Tingjian Lau
 #	> Mail: tjliu@mail.ustc.edu.cn
 #	> Created Time: 2016/05/15
+#       > Detail: 自动创建README和自动提交github
 #########################################################################
 
-import os, sys
+import os, sys, getopt
 from os import system
 
+def usage():
+    print sys.argv[0], 'usage:'
+    print '\t', '-m, --msg: the msg for commit' 
+    print '\t', '-h, --help: print help msg' 
+
 if __name__ == '__main__':
-    msg = sys.argv[1]
-
-    command = 'python auto_create_readme.py'
-    system(command)
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], 'hm:', ['help', 'msg='])
+    except getopt.GetoptError as err:
+        # print help infomation and exit:
+        print(err)
+        usage()
+        sys.exit(2)
+    msg = ''
+    if len(opts) == 0:
+        usage()
+        sys.exit()
+    for opt, arg in opts:
+        if opt in ('-h', '--help'):
+            usage()
+            sys.exit()
+        elif opt in ('-m', '--msg'):
+            msg = arg
+        else:
+            assert False, 'unhandled option'
     
-    command = 'git add .'
-    system(command)
+    commands = ['python auto_create_readme.py'
+                'git add .',
+                'git commit -m "' + msg + '"',
+                'git push origin master']
 
-    command = 'git commit -m \"' + msg + '\"'
-    system(command)
-
-    command = 'git push origin master'
-    system(command)
+    for cmd in commands:
+        system(cmd)
